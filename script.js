@@ -54,4 +54,24 @@ document.getElementById('generateBtn').addEventListener('click', () => {
     promptEnglish += `**Negative Prompt:**\n${negativePrompt}`;
 
     document.getElementById('output_english').value = promptEnglish;
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+    // Clear all input fields
+    document.getElementById('judul_scane').value = '';
+    document.getElementById('deskripsi_karakter').value = '';
+    document.getElementById('suara_karakter').value = '';
+    document.getElementById('aksi_karakter').value = '';
+    document.getElementById('ekspresi_karakter').value = '';
+    document.getElementById('latar_tempat_waktu').value = '';
+    document.getElementById('detail_visual').value = '';
+    document.getElementById('gerakan_kamera').selectedIndex = 0; // Reset dropdown
+    document.getElementById('suasana_keseluruhan').value = '';
+    document.getElementById('suara_lingkungan').value = '';
+    document.getElementById('dialog_karakter').value = '';
+    document.getElementById('negative_prompt').value = '';
+
+    // Clear output areas
+    document.getElementById('output_indonesia').value = '';
+    document.getElementById('output_english').value = '';
 }); 
