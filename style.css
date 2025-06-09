@@ -50,10 +50,16 @@ textarea {
     resize: vertical;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px auto;
+}
+
 button {
     display: block;
     width: 200px;
-    margin: 20px auto;
     padding: 12px;
     background-color: #007bff;
     color: white;
@@ -66,6 +72,14 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+#resetBtn {
+    background-color: #6c757d;
+}
+
+#resetBtn:hover {
+    background-color: #5a6268;
 }
 
 .output-container {
