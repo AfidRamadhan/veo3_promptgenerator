@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veo 3 Prompt Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Veo 3 Consistent Character Prompt Generator</h1>
+        <div class="form-container">
+            <div class="column">
+                <label for="judul_scane">1. Judul Scane</label>
+                <input type="text" id="judul_scane" placeholder="Contoh: Terminal bus malam">
+
+                <label for="deskripsi_karakter">2. Deskripsi Karakter Inti</label>
+                <textarea id="deskripsi_karakter" rows="6" placeholder="Contoh: Seorang vlogger wanita muda asal Minang berusia 27 tahun.&#10;Perawakan/Bentuk Tubuh: tubuh mungil, tinggi 158cm, bentuk badan proporsional.&#10;warna kulit: sawo matang cerah.&#10;Rambut: ikal sebahu, hitam kecokelatan, diikat setengah ke belakang.&#10;Wajah: wajah oval, alis tebal alami, mata hitam besar, senyum ramah, pipi merona, bibir natural dengan sentuhan lip tint.&#10;Pakaian: mengenakan jaket parasut warna kuning mustard dan celana panjang hitam, membawa ransel kecil."></textarea>
+
+                <label for="suara_karakter">3. Detail Suara Karakter</label>
+                <textarea id="suara_karakter" rows="6" placeholder="Contoh: Dia berbicara dengan suara wanita muda yang hangat dan penuh semangat.&#10;Nada: mezzo-soprano.&#10;Timbre: bersahabat dan enerjik.&#10;Aksen/Logat: logat Indonesia dengan sentuhan khas Minang halus, berbicara murni dalam Bahasa Indonesia.&#10;Cara Berbicara: tempo sedang-cepat, gaya bicara lincah dan ekspresif.&#10;PENTING: Seluruh dialog harus dalam Bahasa Indonesia dengan pengucapan natural dan jelas. Pastikan suara karakter ini konsisten di seluruh video."></textarea>
+
+                <label for="aksi_karakter">4. Aksi Karakter</label>
+                <input type="text" id="aksi_karakter" placeholder="Contoh: berjalan di sekitar terminal bus malam sambil melihat-lihat aktivitas penumpang dan pedagang.">
+
+                <label for="ekspresi_karakter">5. Ekspresi Karakter</label>
+                <input type="text" id="ekspresi_karakter" placeholder="Contoh: Karakter menunjukkan ekspresi kagum dan antusias, sering tersenyum sambil melirik kamera.">
+            </div>
+            <div class="column">
+                <label for="latar_tempat_waktu">6. Latar Tempat & Waktu</label>
+                <textarea id="latar_tempat_waktu" rows="4" placeholder="Contoh: latar tempat: di terminal bus antar kota malam hari, terdapat pedagang kaki lima di pinggir jalur keberangkatan, beberapa bus berjajar dengan lampu menyala.&#10;Waktu: malam hari, hujan rintik-rintik."></textarea>
+
+                <label for="detail_visual">7. Detail Visual Tambahan</label>
+                <textarea id="detail_visual" rows="4" placeholder="Contoh: Pencahayaan: natural dari lampu jalan dan lampu bus, pantulan cahaya pada aspal basah.&#10;Gaya Video/Art Style: cinematic realistis.&#10;Kualitas Visual: Resolusi 4K."></textarea>
+                
+                <label for="gerakan_kamera">Gerakan Kamera</label>
+                <select id="gerakan_kamera">
+                    <option value="Static (Statis)">Static (Statis)</option>
+                    <option value="Tracking Shot (Mengikuti Objek)">Tracking Shot (Mengikuti Objek)</option>
+                    <option value="Dolly (Mendekat/Menjauh)">Dolly (Mendekat/Menjauh)</option>
+                    <option value="Zoom In (Perbesar)">Zoom In (Perbesar)</option>
+                    <option value="Zoom Out (Perkecil)">Zoom Out (Perkecil)</option>
+                    <option value="Pan (Geser Horizontal)">Pan (Geser Horizontal)</option>
+                    <option value="Tilt (Geser Vertikal)">Tilt (Geser Vertikal)</option>
+                    <option value="Crane/Boom Shot (Tembakan Derek)">Crane/Boom Shot (Tembakan Derek)</option>
+                    <option value="Handheld (Genggam)">Handheld (Genggam)</option>
+                    <option value="3D Rotation (Rotasi 3D)">3D Rotation (Rotasi 3D)</option>
+                    <option value="Arc (Busur)">Arc (Busur)</option>
+                    <option value="Fly-through (Terbang Melalui)">Fly-through (Terbang Melalui)</option>
+                    <option value="Boom (Ledakan)">Boom (Ledakan)</option>
+                    <option value="Pull-back (Tarik Mundur)">Pull-back (Tarik Mundur)</option>
+                    <option value="Rise (Naik)">Rise (Naik)</option>
+                    <option value="Roll (Bergulir)">Roll (Bergulir)</option>
+                    <option value="Truck (Truk)">Truck (Truk)</option>
+                    <option value="Whip-pan (Geser Cepat)">Whip-pan (Geser Cepat)</option>
+                </select>
+
+                <label for="suasana_keseluruhan">8. Suasana Keseluruhan</label>
+                <input type="text" id="suasana_keseluruhan" placeholder="Contoh: Suasana sibuk, ramai, dengan kesan perjalanan malam yang hidup dan dinamis meskipun hujan.">
+
+                <label for="suara_lingkungan">9. Suara Lingkungan/Ambience</label>
+                <input type="text" id="suara_lingkungan" placeholder="Contoh: SOUND: suara mesin bus menyala, pengumuman dari pengeras suara, derai hujan ringan, dan percakapan samar antar penumpang dan pedagang.">
+
+                <label for="dialog_karakter">10. Dialog Karakter</label>
+                <textarea id="dialog_karakter" rows="3" placeholder="Contoh: DIALOG dalam Bahasa Indonesia: Karakter berkata: Tiap kota punya terminal kayak gini, dan aku suka banget suasana malamnya… hangat walau gerimis begini. Rasanya kayak perjalanan baru mau dimulai."></textarea>
+
+                <label for="negative_prompt">11. Negative Prompt</label>
+                <textarea id="negative_prompt" rows="3" placeholder="Contoh: Hindari: teks di layar, subtitle, tulisan di video, font, logo, distorsi, artefak, anomali, wajah ganda, anggota badan cacat, tangan tidak normal, orang tambahan, objek mengganggu, kualitas rendah, buram, glitch, suara robotik, suara pecah."></textarea>
+            </div>
+        </div>
+        <button id="generateBtn">Generate Prompt</button>
+        <div class="output-container">
+            <div class="output-column">
+                <h2>Prompt (Bahasa Indonesia)</h2>
+                <textarea id="output_indonesia" rows="15"></textarea>
+            </div>
+            <div class="output-column">
+                <h2>Final Prompt (English)</h2>
+                <textarea id="output_english" rows="15" readonly></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
